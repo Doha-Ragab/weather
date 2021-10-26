@@ -1,0 +1,127 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1e202b;
+}
+.navbar-toggler-icon{
+    color: #009ad8 !important;
+}
+nav  .logo h1{
+    font-weight: 700 !important;
+    color:#fff !important;
+    font-size: 16px !important;
+    
+}
+nav .logo div p{
+    color:#bfc1c8;
+    font-size: 10px;
+
+}
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+.navbar-collapse .nav-item a{
+    color: #fff !important;
+    font-weight: 500;
+    margin: 5px;
+    font-size: 14px;
+    padding: 4px  23px !important ;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 30px;
+
+}
+.navbar-collapse .nav-item a:hover{
+    border: 2px solid #009ad8;
+    color: #009ad8 !important;
+
+}
+.bg-img{
+    background-image: url(../img/banner.png);
+    /* background-position:center center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* min-height: 350px; */
+    /* padding: 70px 0px; */
+}
+.searchinput , .subinput{
+    background-color: #1e202b !important;
+    border: 0px;
+    font-size: 14px;
+    color: #fff !important;;
+
+}
+.btnSearch ,.btnsub{
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background-color: #009ad8 ;
+    color: #fff;
+    padding: 0px 40px;
+    margin: 2px;
+   
+    
+    z-index: 2;
+}
+.btnsub{
+    right: 13px;
+    padding: 0px 30px;
+}
+
+footer{
+    background-color: #262936;
+   
+}
+
+footer p{
+    color: #bfc1c8;
+    font-size: 14px;
+    margin-top: -20px;
+}
+footer i{
+    color: #009ad8;
+    background-color: #1e202b;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+}
+footer i:hover{
+    color: #fff;
+    background-color: #009ad8;
+}
+
+
+.day1 h2{
+    font-size: 90px;
+    font-weight: 700;
+    /* color: aqua; */
+}
+#desctoday{
+    color: #009ad8;
+}
+.row{
+    --bs-gutter-x:0rem;
+    /* margin: 50px; */
+    position: relative;
+    top:40px;
+    left: 0px;
+
+}
+.row p{
+    color: #bfc1c8;
+}
+.color-white{
+    color: #fff;
+}
+#desctoday ,#descnext ,#descAnext{
+    color: #009ad8;
+}
+#details{
+    color: #bfc1c8;;
+}

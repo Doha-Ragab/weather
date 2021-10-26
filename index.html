@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light m-4 ">
+        <div class="container">
+                <div class=" logo d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.png" alt=""  class="d-inline-block align-text-top"> 
+                      </a>
+                      <div >
+                     <h1 class="mt-2"> weather</h1>
+                        <p>tagline goes here</p>
+                      </div>
+
+                </div>
+                
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fas fa-bars text-white fs-3"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0  text-center">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- main-sec -->
+      <section >
+          <div class="bg-img">
+            <div class="container " >
+              <div class="py-5 px-md-5 px-1">
+                <div class="input-group position-relative">
+                  <input type="text" class="form-control rounded-pill p-3 searchinput " id="searchinput" placeholder="Find your location..." style="z-index: 1; ">
+                  <button class="btn rounded-pill position-absolute btnSearch  border-0 " id="btnSearch"  type="button">Find</button>   
+                </div>
+              </div>
+
+              <div class="row justify-content-center p-0 ">
+                <div class="col-md-3 flex-grow-1 ">
+                  <div style="background-color: #2d303d;width: 100%;" class="d-flex justify-content-evenly px-2 py-1">
+                    <p id="curday" class="flex-grow-1 "></p><p id="curdate"></p>&nbsp; <p id="curmonth"></p>
+                  </div>
+
+                  <div style="background-color: #323544;" class="day1 w-100">
+                    <div class="px-3 py-3">
+                      <p id="cityname"></p>
+                      <div class="d-flex justify-content-evenly align-items-center"> 
+                        <div class="d-flex color-white">
+                          <h2 id="dgreetoday"></h2>
+                          <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                        </div>
+                       <img id="icontoday" style="width: 100px;""/>
+                     </div>
+                     <p id="desctoday"></p>
+                  <div id="details">
+                    <img src="./img/icon-umberella.png" >
+                    <span id="humidity"></span><span>%</span>
+                  
+                    <img src="./img/icon-wind.png" class="ms-3">
+                    <span id="wind"  ></span><span>km/h</span>
+                  
+                    <img src="./img/icon-compass.png" class="ms-3">
+                    <span id="windDirection"></span>
+                  </div>
+                    </div>
+                   
+                  </div>
+
+                </div>
+
+                <div class="col-md-3 flex-grow-1 ">
+                <div style="background-color: #262936; " class="h-100" > 
+                  <div class="head-t d-flex justify-content-between flex-lg-row flex-column">
+                    <div style="background-color: #222530; width: 100%;"><p id="secday" class="text-center px-2 py-1"></p></div>
+                  </div>
+                    <div style="background-color: #262936;" class="text-center w-100 p-2">
+                      <img id="iconnext" class="mx-5 p-2"/>
+                      <div class="d-flex justify-content-center color-white"> <h4 id="maxd-next"></h4><h4 class="d-inline-block"><sup>o</sup>C</h4></div>
+                      <div class="d-flex justify-content-center "><p id="mind-next"></p><p class="d-inline-block"><sup>o</sup>C</p></div>  
+                       <p id="descnext" class="p-2"></p>
+                </div>
+                </div>
+                   
+                  
+                </div>
+
+                <div class="col-md-3 flex-grow-1 ">
+                  <div class="h-100" style="background-color: #323544;">
+                    <div class="head-t d-flex justify-content-between flex-lg-row flex-column">
+                      <div style="background-color: #2d303d; width: 100%;"><p id="thirdday" class="text-center px-2 py-1"></p></div>
+                    </div>
+                    
+                     <div style="background-color: #323544;"  class="text-center w-100 p-2">
+                          <img id="iconAnext" class="mx-5 p-2"/>
+                             <div class="d-flex justify-content-center color-white"> <h4 id="maxd-Anext"></h4><h4 class="d-inline-block"><sup>o</sup>C</h4></div>
+                             <div class="d-flex justify-content-center"> <p id="mind-Anext"></p><p class="d-inline-block"><sup>o</sup>C</p></div>  
+                             <p id="descAnext" class="p-2"></p>
+                     </div>
+                  </div>
+                  </div>
+                 
+
+              </div>
+               
+            
+
+
+
+                  <!-- <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="background-color: #2d303d;" class="d-flex justify-content-between"><p id="curday" class="flex-grow-1"></p><p id="curdate"></p>&nbsp; <p id="curmonth"></p></th>
+                            <th style="background-color: #222530;" ><p id="secday" class="text-center"></p></th>
+                            <th style="background-color: #2d303d;" ><p id="thirdday" class="text-center"></p></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td scope="row" style="background-color: #323544;" class="day1" >
+                            <p id="cityname"></p>
+                            <div class="d-flex justify-content-evenly align-items-center"> 
+                              <div class="d-flex">
+                                <h2 id="dgreetoday"></h2>
+                                <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                              </div>
+                             <img id="icontoday" style="width: 100px;""/>
+                           </div>
+                           <p id="desctoday"></p>
+                        <div id="details">
+                          <img src="./img/icon-umberella.png" >
+                          <span id="humidity"></span><span>%</span>
+
+                          <img src="./img/icon-wind.png" class="ms-3">
+                          <span id="wind"  ></span><span>km/h</span>
+
+                          <img src="./img/icon-compass.png" class="ms-3">
+                          <span id="windDirection"></span>
+                        </div>
+                      </td>
+                            <td style="background-color: #262936;" class="text-center">
+                              <img id="iconnext" class="mx-5 p-2"/>
+                             <div class="d-flex justify-content-center "> <h4 id="maxd-next"></h4><h4 class="d-inline-block"><sup>o</sup>C</h4></div>
+                             <div class="d-flex justify-content-center "><p id="mind-next"></p><p class="d-inline-block"><sup>o</sup>C</p></div>  
+                              <p id="descnext" class="p-2"></p>
+                            </td>
+                            <td style="background-color: #323544;"  class="text-center">
+                              <img id="iconAnext" class="mx-5 p-2"/>
+                              <div class="d-flex justify-content-center"> <h4 id="maxd-Anext"></h4><h4 class="d-inline-block"><sup>o</sup>C</h4></div>
+                              <div class="d-flex justify-content-center"> <p id="mind-Anext"></p><p class="d-inline-block"><sup>o</sup>C</p></div>  
+                              <p id="descAnext" class="p-2"></p>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table> -->
+              </div>
+          </div>
+     </section>
+     <!-- footer-sec -->
+     <footer class="py-5">
+         <div class="container py-5">
+             <div class="row  align-items-center">
+                 <div class="col-lg-9 col-12">
+                   <div class="mb-md-0 mb-3">
+                    <div class="input-group  px-2  position-relative ">
+                      <input type="text" class="form-control rounded-pill p-3 subinput " placeholder="Enter your email to subscribe..." style="z-index: 1;">
+                      <button class=" px-md-4 py-md-2  px-2 py-1  btn rounded-pill position-absolute btnsub  border-0 "  type="button">Subscribe</button>   
+                  </div>
+                   </div>
+                   
+                 </div>
+                <div class="col-md-3 col-12 mb-md-0 mb-3 ">
+                    <div class="social-media d-flex justify-content-center">
+                        <a class="rounded-circle "><i class="fab fa-facebook-f fs-5" style="padding-left: 13px;"></i></a> 
+                        <a  class="rounded-circle "><i class="fab fa-twitter fs-5"></i></a>  
+                        <a  class="rounded-circle"><i class="fab fa-google-plus-g  fs-5"></i></a>
+                        <a  class="rounded-circle "><i class="fab fa-pinterest  fs-5"></i></a> 
+     
+                       </div>
+                </div>
+                <p class="m-2 p-md-2 p-0 text-md-start text-center ">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+             </div>
+            
+
+  
+
+         </div>
+     </footer>
+   
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
